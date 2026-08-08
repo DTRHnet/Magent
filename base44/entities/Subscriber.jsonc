@@ -1,0 +1,36 @@
+{
+  "name": "Subscriber",
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string",
+      "default": "storefront"
+    },
+    "sequences_sent": {
+      "type": "number",
+      "default": 0
+    },
+    "last_sequence_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "purchased": {
+      "type": "boolean",
+      "default": false
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "unsubscribed"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "email"
+  ]
+}

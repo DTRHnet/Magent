@@ -1,0 +1,45 @@
+{
+  "name": "NicheResearch",
+  "type": "object",
+  "properties": {
+    "niche": {
+      "type": "string"
+    },
+    "demand_score": {
+      "type": "number",
+      "default": 0
+    },
+    "competition_score": {
+      "type": "number",
+      "default": 0
+    },
+    "opportunity_score": {
+      "type": "number",
+      "default": 0
+    },
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "summary": {
+      "type": "string"
+    },
+    "recommended_products": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "researched",
+        "used",
+        "archived"
+      ],
+      "default": "researched"
+    }
+  },
+  "required": [
+    "niche"
+  ]
+}

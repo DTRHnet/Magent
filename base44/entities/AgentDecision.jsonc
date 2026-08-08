@@ -1,0 +1,40 @@
+{
+  "name": "AgentDecision",
+  "type": "object",
+  "properties": {
+    "decision_type": {
+      "type": "string",
+      "enum": [
+        "generate",
+        "price_adjust",
+        "retire",
+        "double_down",
+        "marketing",
+        "niche_research"
+      ],
+      "default": "generate"
+    },
+    "product_id": {
+      "type": "string"
+    },
+    "reasoning": {
+      "type": "string"
+    },
+    "action_taken": {
+      "type": "string"
+    },
+    "expected_impact": {
+      "type": "string"
+    },
+    "revenue_at_time": {
+      "type": "number",
+      "default": 0
+    },
+    "metrics": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "decision_type"
+  ]
+}

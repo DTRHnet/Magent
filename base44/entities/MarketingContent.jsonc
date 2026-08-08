@@ -1,0 +1,31 @@
+{
+  "name": "MarketingContent",
+  "type": "object",
+  "properties": {
+    "product_id": {
+      "type": "string"
+    },
+    "content_type": {
+      "type": "string",
+      "enum": [
+        "product_description",
+        "email_sequence",
+        "social_snippet"
+      ]
+    },
+    "content": {
+      "type": "string"
+    },
+    "channel": {
+      "type": "string"
+    },
+    "used": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "product_id",
+    "content_type"
+  ]
+}

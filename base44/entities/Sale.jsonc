@@ -1,0 +1,84 @@
+{
+  "name": "Sale",
+  "type": "object",
+  "properties": {
+    "product_id": {
+      "type": "string"
+    },
+    "product_title": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "currency": {
+      "type": "string",
+      "default": "USD"
+    },
+    "payment_method": {
+      "type": "string",
+      "enum": [
+        "stripe",
+        "crypto"
+      ],
+      "default": "stripe"
+    },
+    "payment_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "completed",
+        "failed",
+        "refunded"
+      ],
+      "default": "pending"
+    },
+    "fee": {
+      "type": "number",
+      "default": 0
+    },
+    "net_amount": {
+      "type": "number",
+      "default": 0
+    },
+    "customer_email": {
+      "type": "string"
+    },
+    "customer_id": {
+      "type": "string"
+    },
+    "delivery_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "delivered",
+        "failed"
+      ],
+      "default": "pending"
+    },
+    "download_token": {
+      "type": "string"
+    },
+    "stripe_session_id": {
+      "type": "string"
+    },
+    "crypto_invoice_id": {
+      "type": "string"
+    },
+    "crypto_pay_address": {
+      "type": "string"
+    },
+    "is_upsell": {
+      "type": "boolean",
+      "default": false
+    },
+    "is_bump": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "product_id",
+    "amount"
+  ]
+}

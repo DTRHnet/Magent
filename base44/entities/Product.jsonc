@@ -1,0 +1,88 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "niche": {
+      "type": "string"
+    },
+    "product_type": {
+      "type": "string",
+      "enum": [
+        "report",
+        "template",
+        "prompt_pack",
+        "mini_guide",
+        "checklist",
+        "tool",
+        "ai_asset"
+      ],
+      "default": "report"
+    },
+    "content": {
+      "type": "string"
+    },
+    "price": {
+      "type": "number"
+    },
+    "original_price": {
+      "type": "number"
+    },
+    "currency": {
+      "type": "string",
+      "default": "USD"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "active",
+        "retired"
+      ],
+      "default": "draft"
+    },
+    "cover_url": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "quality_score": {
+      "type": "number",
+      "default": 0
+    },
+    "sales_count": {
+      "type": "number",
+      "default": 0
+    },
+    "gross_revenue": {
+      "type": "number",
+      "default": 0
+    },
+    "upsell_text": {
+      "type": "string"
+    },
+    "bump_text": {
+      "type": "string"
+    },
+    "ai_generated": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "title",
+    "price"
+  ]
+}
